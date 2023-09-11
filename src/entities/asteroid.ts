@@ -1,21 +1,5 @@
 import { Sprite } from "kontra"
-let asteroid = Sprite({
-    type: 'asteroid',  // we'll use this later for collision detection
-    x: 100,
-    y: 100,
-    dx: Math.random() * 4 - 2,
-    dy: Math.random() * 4 - 2,
-    radius: 16,
-    render: function () {
-        if (this.context != undefined) {
-            this.context.strokeStyle = 'white'
-            this.context.beginPath()
-            this.context.arc(0, 0, this.radius, 0, 2 * Math.PI)
-            this.context.stroke()
-        }
-    },
 
-})
 
 function createAsteroid(x: number, y: number): Sprite {
     let asteroid = Sprite({

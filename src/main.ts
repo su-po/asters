@@ -1,8 +1,8 @@
-import { GameLoop, Sprite, init, initKeys, onKey } from "kontra"
+import { GameLoop, Sprite, init, onKey } from "kontra"
 import { generateAsteroids } from "./entities/asteroid"
 import { createShip } from "./entities/ship"
 
-let { canvas, context } = init()
+let { canvas } = init()
 const maxWidth = canvas.width
 const maxHeight = canvas.height
 
