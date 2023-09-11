@@ -2,6 +2,7 @@
 const scale = 1.6
 
 import { Sprite, degToRad, initKeys, keyPressed, keyMap } from "kontra"
+import { getRandomChord, playChord, playNote, playScale } from "../sound/synth"
 
 console.log(keyMap)
 initKeys()
@@ -9,9 +10,11 @@ initKeys()
 function createShip(wLimit: number, hLimit: number): Sprite {
     function wrapVertical(ship: Sprite): void {
         if (ship.y < -ship.radius) {
+            playNote('C4')
             ship.y = hLimit + ship.radius
         } else if (ship.y > hLimit + ship.radius) {
             ship.y = -ship.radius
+            playNote('C4')
         }
     }
 
@@ -42,6 +45,10 @@ function createShip(wLimit: number, hLimit: number): Sprite {
             }
         },
         update: () => {
+
+            if (keyPressed('space')) {
+                playChord(getRandomChord().slice(0, Math.floor(Math.random() * 3) + 1))
+            }
             wrapVertical(ship)
             wrapHorizontal(ship)
             if (ship.rotation != undefined) {

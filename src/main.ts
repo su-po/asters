@@ -1,6 +1,7 @@
 import { GameLoop, Sprite, init, onKey } from "kontra"
 import { generateAsteroids } from "./entities/asteroid"
 import { createShip } from "./entities/ship"
+import { playNote } from "./sound/synth"
 
 let { canvas } = init()
 const maxWidth = canvas.width

@@ -13,6 +13,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "kontra": "^9.0.0"
+    "kontra": "^9.0.0",
+    "tone": "next"
   }
 }
