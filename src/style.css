@@ -1,0 +1,56 @@
+:root {
+  font-family: 'Orbitron', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  background-color: darkblue;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+canvas {
+  margin: 10vh 0;
+  overflow: hidden;
+  width: 800px;
+  height: 450px;
+  border: 2px solid lightgray;
+  border-radius: 1rem;
+  aspect-ratio: 16 / 9;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  justify-self: baseline;
+  text-decoration: double;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.subtitle {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 900;
+
+}
